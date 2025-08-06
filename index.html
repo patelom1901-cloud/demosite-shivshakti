@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiv Shakti Industries</title>
+  <link rel="stylesheet" href="shiv.css" />
+  <script defer src="shiv.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <span>Email: shivshaktiindustries768@gmail.com | Phone: +91 9909495768 </span>
+    </div>
+
+    <div class="logo">
+      <h1>SHIV SHAKTI INDUSTRIES</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="mobile-menu-toggle">☰</div>
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Slider Section under navbar -->
+  <section class="products-section">
+    <h2>Our Products</h2>
+    <div class="slider-container">
+      <div class="slider">
+        <span data-product="wire-rope">
+          <img src="images/wire-rope.jpg.jpeg" alt="Wire Rope" title="Click to know more" />
+        </span>
+        <span data-product="sling-rope">
+          <img src="images/slingrope.jpg.jpg" alt="Sling Rope" title="Click to know more" />
+        </span>
+        <span data-product="drum-mix">
+          <img src="images/drum mix.jpg.jpg" alt="Drum Mix Plant Parts" title="Click to know more" />
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Quality Wire Ropes & Drum Mix Parts</h2>
+      <p>Serving Industry with Strength & Precision</p>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h2>Welcome to Shiv Shakti Industries</h2>
+    <p>
+      Shiv Shakti Industries is a leading manufacturer of wire ropes, sling ropes, and drum mix plant spare parts.
+      We are committed to delivering high-strength, precision-engineered products that support construction,
+      infrastructure, and machinery industries.
+    </p>
+    <p>
+      Backed by advanced machinery and skilled professionals, we ensure top-notch quality in every component we produce.
+    </p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="welcome">
+    <h2>About Shiv Shakti Industries</h2>
+    <p>
+      Shiv Shakti Industries is a trusted name in the manufacturing of wire ropes, sling ropes, and drum mix plant parts. With a commitment to quality and innovation, our products are designed to meet the needs of heavy-duty industries, construction companies, and infrastructure projects.
+    </p>
+    <p>
+      Our factory is equipped with advanced machinery, operated by skilled professionals dedicated to delivering reliable products that exceed industry standards.
+    </p>
+    <p>
+      We believe in building long-term relationships with our customers by ensuring consistency, quality, and prompt delivery across all our offerings.
+    </p>
+  </section>
+
+  <!-- Product Cards Section -->
+  <section id="products" class="welcome">
+    <h2>Industrial Product Details</h2>
+    <div class="product-gallery">
+      <div class="product-card">
+        <img src="images/wire-rope.jpg.jpeg" alt="Wire Rope" />
+        <h3>Wire Rope</h3>
+        <div class="product-info-overlay">
+          Used in cranes, elevators, hoists, and rigging systems.
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/slingrope.jpg.jpg" alt="Sling Rope" />
+        <h3>Sling Rope</h3>
+        <div class="product-info-overlay">
+          Ideal for heavy load lifting and construction rigging.
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/drum mix.jpg.jpg" alt="Drum Mix Plant Parts" />
+        <h3>Drum Mix Plant Parts</h3>
+        <div class="product-info-overlay">
+          Includes gear rings, segments, used in asphalt mix plants.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="welcome">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shiv Shakti Industries. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ Product Info Modal (hidden until clicked) -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modalImage" src="" alt="Product" />
+      <div id="modalText" class="modal-info"></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Top Bar */
+.top-bar {
+  background: #fffb00ce;
+  padding: 10px;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  padding: 15px;
+}
+.logo h1 {
+  font-family: serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+/* Navigation */
+nav {
+  background: #333;
+  position: relative;
+  padding: 10px 20px;
+}
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+}
+.nav-list li a:hover {
+  background: #444;
+}
+
+/* Hero Section */
+.hero {
+  background: url("images/gear.jpg") center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Welcome Section */
+.welcome {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+/* Product Gallery Cards */
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.product-card h3 {
+  margin: 10px 0;
+  color: #ff6600;
+}
+.product-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.product-card:hover .product-info-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slider Section */
+.products-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+}
+.products-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #222;
+}
+.slider-container {
+  width: 90%;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.slider {
+  display: inline-flex;
+  gap: 20px;
+}
+.slider span {
+  display: inline-block;
+  transition: 0.3s ease;
+}
+.slider img {
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.slider img:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+.contact-form label {
+  display: block;
+  margin: 15px 0 5px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.contact-form button:hover {
+  background-color: #e55b00;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease;
+}
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  animation: scaleUp 0.3s ease;
+}
+.modal-content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.modal-info {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes scaleUp {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-end;
+    display: none;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+  .slider img {
+    height: 250px;
+  }
+}
